@@ -1,7 +1,10 @@
+import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import HeadTags from "../Extras/HeadTags";
 
 const Login = () => {
+  const route = useRouter();
+
   function showPassword(e) {
     e.preventDefault();
 
@@ -31,6 +34,7 @@ const Login = () => {
     //   localStorage.setItem("token", result.data.token);
     // router.push("/");
     toast.success("با موفقيت وارد شديد.");
+    route.push("/dashboard");
     // }
   }
 
