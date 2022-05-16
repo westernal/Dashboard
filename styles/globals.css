@@ -1,16 +1,273 @@
-html,
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: yekan;
+  src: url("../public/Fonts/IRANYekanRegular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: yekanBold;
+  src: url("../public/Fonts/IRANYekanExtraBlack.ttf");
+  font-display: swap;
+}
+
 body {
-  padding: 0;
+  font-family: yekan;
+  overflow-x: hidden;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  direction: rtl;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+.Toastify__toast {
+  font-family: yekan !important;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.login-form,
+.data-table {
+  padding: 30px;
+  background: linear-gradient(45deg, #365eff, #fc6ebc);
+  animation: changeColor 2s linear infinite alternate;
+  border-radius: 20px;
+}
+
+.gelpCx {
+  border-radius: 0 !important;
+}
+
+@keyframes changeColor {
+  to {
+    filter: hue-rotate(90deg);
+  }
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page {
+  padding-top: 30vh;
+  gap: 5%;
+}
+
+.inputs input {
+  width: 30vw;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: yekan;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.profile-page .login-form,
+.users-page .data-table,
+.orders-page .data-table,
+.branches-page .data-table {
+  margin-top: 100px;
+}
+
+#prime-btn {
+  width: 100px;
+  padding: 5px;
+  margin-top: 50px;
+  border-radius: 10px;
+  font-family: yekan;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#prime-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.navbar {
+  padding: 20px 0;
+  border-left: 1px solid #ededed;
+  min-height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+
+.profile-info {
+  padding: 0 50px;
+}
+
+.user-img {
+  border-radius: 50px;
+  border: 0.5px solid black;
+  padding: 10px;
+}
+
+.nav-items {
+  margin-top: 50px;
+}
+
+.nav-item {
+  opacity: 0.6;
+  justify-content: right;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+
+.nav-item:hover {
+  opacity: 1;
+}
+
+.nav-item img {
+  width: 25px;
+  height: 25px;
+}
+
+#logout-color {
+  color: red;
+}
+
+.dash-page #dash-item,
+.profile-page #profile-item,
+.users-page #users-item,
+.orders-page #orders-item,
+.branches-page #branches-item {
+  opacity: 1;
+  border-right: 4px solid #365eff;
+}
+
+#username {
+  font-size: 18px;
+}
+
+.header {
+  justify-content: space-evenly;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+}
+
+.header img {
+  width: 80px;
+}
+
+.header p {
+  font-size: 20px;
+}
+
+a {
+  color: black;
+}
+
+#responsive {
+  display: none;
+  width: 50px;
+}
+
+.page-content {
+  float: right;
+}
+
+.closebtn {
+  float: right;
+  font-size: 35px;
+  color: black;
+  margin-right: 40px;
+}
+
+.login-form img {
+  margin-bottom: 30px;
+  width: 80px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.website-details {
+  padding: 50px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.website-details .login-form {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.pw-input {
+  position: relative;
+}
+
+.pw-input img {
+  width: 20px;
+  position: absolute;
+  top: 12px;
+  left: 15px;
+}
+
+@media only screen and (max-width: 920px) {
+  .inputs input {
+    width: 40vw;
+  }
+
+  .login-page {
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 20vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inputs input {
+    width: 60vw;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    width: 0px;
+    z-index: 3;
+    overflow-y: hidden;
+  }
+
+  .profile-info {
+    margin-top: 80px;
+    padding: 0;
+  }
+
+  #responsive {
+    display: block;
+  }
+
+  .grid-container {
+    grid-template-columns: auto;
+  }
 }
