@@ -13,20 +13,6 @@ const Branches = () => {
       name: "کد کاربر",
       selector: (row) => row.year,
     },
-    {
-      name: "کد کاربر",
-      selector: (row) => row.year,
-    },
-    {
-      name: "کد کاربر",
-      selector: (row) => row.year,
-      hide: "md",
-    },
-    {
-      name: "کد کاربر",
-      selector: (row) => row.year,
-      hide: "md",
-    },
   ];
 
   const data = [
