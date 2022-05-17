@@ -35,6 +35,13 @@ textarea:focus {
   outline: none;
 }
 
+input[type="password"],
+input[type="text"],
+select:focus,
+textarea {
+  font-size: 16px;
+}
+
 .Toastify__toast {
   font-family: yekan !important;
 }
