@@ -1,9 +1,14 @@
+import { useState } from "react";
 import { toast } from "react-toastify";
+import Loader from "../../components/Extras/Loader";
 import Header from "../../components/Layout/Header";
 import NavBar from "../../components/Layout/NavBar";
 
 const AddProducts = () => {
+  const [loader, SetLoader] = useState(false);
+
   function addProduct(details, title, image) {
+    SetLoader(true);
     toast.success("محصول با موفقیت ثبت شد.");
   }
 
@@ -28,6 +33,7 @@ const AddProducts = () => {
         <NavBar />
         <div className="page-content">
           <Header title={"محصول ها"} />
+          {loader && <Loader size={20} />}
           <div className="flex">
             <div className="login-form mt-100">
               <div className="inputs">

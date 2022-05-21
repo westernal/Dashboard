@@ -29,12 +29,16 @@ const NavBar = () => {
       >
         &times;
       </a>
-      <div className="profile-info flex">
-        <div className="user-img flex">
-          <img src="/Images/profile-svgrepo-com.svg" alt="user's picture" />
-        </div>
-        <p id="username">علی نویدی</p>
-      </div>
+      <Link href={"/profile"}>
+        <a>
+          <div className="profile-info flex">
+            <div className="user-img flex">
+              <img src="/Images/profile-svgrepo-com.svg" alt="user's picture" />
+            </div>
+            <p id="username">علی نویدی</p>
+          </div>
+        </a>
+      </Link>
 
       <div className="nav-items">
         <Link href="/dashboard">
