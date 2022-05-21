@@ -34,7 +34,7 @@ const Orders = () => {
         <div className="page-content">
           <Header title={"سفارش ها"} />
           <div className=" flex">
-            <div className="data-table">
+            <div className="data-table mt-100">
               {" "}
               <DataTable
                 columns={columns}

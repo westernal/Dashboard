@@ -1,7 +1,12 @@
+import Loader from "../components/Extras/Loader";
 import Header from "../components/Layout/Header";
 import NavBar from "../components/Layout/NavBar";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Profile = () => {
+  const [loader, SetLoader] = useState(false);
+
   function showPassword(e) {
     e.preventDefault();
 
@@ -13,7 +18,23 @@ const Profile = () => {
     }
   }
 
-  function changePassword() {}
+  function changePassword(password) {}
+
+  function checkInputs(e) {
+    e.preventDefault();
+    SetLoader(true);
+
+    const password = document.getElementById("password");
+    const secondPassword = document.getElementById("rpassword");
+
+    if (password.value != secondPassword.value) {
+      toast.error("تکرار رمز عبور مطابقت ندارد.");
+    }
+
+    if (password.value < 6) {
+      toast.error("کلمه عبور اشتباه است");
+    } else changePassword(password.value);
+  }
 
   return (
     <div className="profile-page">
@@ -21,8 +42,9 @@ const Profile = () => {
         <NavBar />
         <div className="page-content">
           <Header title={"مشخصات"} />
+          {loader && <Loader size={20} />}
           <div className="flex">
-            <div className="login-form">
+            <div className="login-form mt-100">
               <div className="inputs">
                 <input
                   type="text"
@@ -54,7 +76,7 @@ const Profile = () => {
                 </div>
               </div>
               <div className="flex">
-                <button id="prime-btn" onClick={changePassword}>
+                <button id="prime-btn" onClick={checkInputs}>
                   ویرایش
                 </button>
               </div>

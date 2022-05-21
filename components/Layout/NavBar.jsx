@@ -55,6 +55,15 @@ const NavBar = () => {
           </a>
         </Link>
 
+        <Link href="/products">
+          <a>
+            <div className="nav-item flex" id="products-item">
+              <img src="/Images/products-svgrepo-com.svg" alt="Products" />
+              <p>محصول ها</p>
+            </div>
+          </a>
+        </Link>
+
         <Link href="/users">
           <a>
             <div className="nav-item flex" id="users-item">

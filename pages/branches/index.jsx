@@ -34,7 +34,7 @@ const Branches = () => {
         <div className="page-content">
           <Header title={"نمایندگی ها"} />
           <div className=" flex">
-            <div className="data-table">
+            <div className="data-table mt-100">
               {" "}
               {data && (
                 <DataTable

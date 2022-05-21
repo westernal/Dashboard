@@ -1,9 +1,12 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import HeadTags from "../Extras/HeadTags";
+import Loader from "../Extras/Loader";
 
 const Login = () => {
   const route = useRouter();
+  const [loader, SetLoader] = useState(false);
 
   function showPassword(e) {
     e.preventDefault();
@@ -17,6 +20,7 @@ const Login = () => {
   }
 
   async function logIn(email, password) {
+    SetLoader(true);
     // const option = {
     //   method: "POST",
     //   headers: { "Content-Type": "application/json" },
@@ -32,9 +36,11 @@ const Login = () => {
 
     // if (result.status == 201) {
     //   localStorage.setItem("token", result.data.token);
-    // router.push("/");
     toast.success("با موفقيت وارد شديد.");
     route.push("/dashboard");
+    // } else {
+    //   toast.error("مشکلی رخ داده، لطفا دوباره تلاش کنید.");
+    //   SetLoader(false);
     // }
   }
 
@@ -54,28 +60,31 @@ const Login = () => {
   }
 
   return (
-    <div className="login-page flex">
-      <HeadTags title={"ورود"} />
-      <div className="flex">
-        <img src="/vercel.svg" alt="logo" id="logo" />
-      </div>
-      <div className="login-form">
-        <div className="inputs">
-          <input type="text" placeholder="ایمیل" id="email" />
-          <div className="pw-input">
-            <input type="password" placeholder="رمز عبور" id="password" />
-            <a href="#" onClick={showPassword}>
-              <img src="/Images/eye-svgrepo-com.svg" alt="Show Password" />
-            </a>
+    <>
+      {loader && <Loader size={20} />}
+      <div className="login-page flex">
+        <HeadTags title={"ورود"} />
+        <div className="flex">
+          <img src="/vercel.svg" alt="logo" id="logo" />
+        </div>
+        <div className="login-form">
+          <div className="inputs">
+            <input type="text" placeholder="ایمیل" id="email" />
+            <div className="pw-input">
+              <input type="password" placeholder="رمز عبور" id="password" />
+              <a href="#" onClick={showPassword}>
+                <img src="/Images/eye-svgrepo-com.svg" alt="Show Password" />
+              </a>
+            </div>
+          </div>
+          <div className="flex">
+            <button id="prime-btn" onClick={checkInputs}>
+              ورود
+            </button>
           </div>
         </div>
-        <div className="flex">
-          <button id="prime-btn" onClick={checkInputs}>
-            ورود
-          </button>
-        </div>
       </div>
-    </div>
+    </>
   );
 };
 

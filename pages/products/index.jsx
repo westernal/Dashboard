@@ -1,8 +1,9 @@
 import Header from "../../components/Layout/Header";
 import NavBar from "../../components/Layout/NavBar";
 import DataTable from "react-data-table-component";
+import Link from "next/link";
 
-const Users = () => {
+const Products = () => {
   const columns = [
     {
       name: "نام",
@@ -27,12 +28,13 @@ const Users = () => {
       year: "1984",
     },
   ];
+
   return (
-    <div className="users-page">
+    <div className="products-page">
       <div className="grid-container">
         <NavBar />
         <div className="page-content">
-          <Header title={"کاربر ها"} />
+          <Header title={"محصول ها"} />
           <div className=" flex">
             <div className="data-table mt-100">
               {" "}
@@ -45,10 +47,17 @@ const Users = () => {
               />
             </div>
           </div>
+          <div className="flex">
+            <Link href={"/products/add"}>
+              <a>
+                <button id="add-btn">اضافه کردن محصول</button>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Users;
+export default Products;
