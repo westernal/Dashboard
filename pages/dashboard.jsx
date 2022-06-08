@@ -13,36 +13,24 @@ const Dashboard = () => {
             <Link href={"/orders"}>
               <a>
                 <div className="login-form">
-                  <div className="flex">
-                    <p>سفارش ها</p>
-                  </div>
-                  <div className="flex">
-                    <p>10</p>
-                  </div>
+                  <p>سفارش ها</p>
+                  <p>10</p>
                 </div>
               </a>
             </Link>
             <Link href={"/users"}>
               <a>
                 <div className="login-form">
-                  <div className="flex">
-                    <p>کاربر ها</p>
-                  </div>
-                  <div className="flex">
-                    <p>9</p>
-                  </div>
+                  <p>کاربر ها</p>
+                  <p>9</p>
                 </div>
               </a>
             </Link>
             <Link href={"/branches"}>
               <a>
                 <div className="login-form">
-                  <div className="flex">
-                    <p>نمایندگی ها</p>
-                  </div>
-                  <div className="flex">
-                    <p>12</p>
-                  </div>
+                  <p>نمایندگی ها</p>
+                  <p>12</p>
                 </div>
               </a>
             </Link>

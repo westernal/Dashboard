@@ -135,6 +135,15 @@ a {
   margin-top: 100px;
 }
 
+.dash-page .login-form {
+  text-align: center;
+}
+
+.dash-page .login-form P {
+  margin: 0;
+  padding: 5px;
+}
+
 #prime-btn,
 #add-btn {
   width: 100px;
