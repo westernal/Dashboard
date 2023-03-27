@@ -34,10 +34,9 @@ const Products = () => {
       <div className="grid-container">
         <NavBar />
         <div className="page-content">
-          <Header title={"محصول ها"} />
+          <Header title={"Products"} />
           <div className=" flex">
             <div className="data-table mt-100">
-              {" "}
               <DataTable
                 columns={columns}
                 data={data}
@@ -50,7 +49,7 @@ const Products = () => {
           <div className="flex">
             <Link href={"/products/add"}>
               <a>
-                <button id="add-btn">اضافه کردن محصول</button>
+                <button id="add-btn">Add product</button>
               </a>
             </Link>
           </div>
