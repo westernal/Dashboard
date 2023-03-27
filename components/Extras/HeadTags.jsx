@@ -10,9 +10,8 @@ const HeadTags = ({ title }) => {
           name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5"
         />
-        <meta name="description" content="داشبورد ادمين" />
-        <meta name="keywords" content="samsung apple huawei xiaomi" />
-        <title>{`${title} - داشبورد`}</title>
+        <meta name="description" content="Admin Dashboard" />
+        <title>{`Dashboard - ${title}`}</title>
       </Head>
     </>
   );

@@ -63,7 +63,7 @@ const Login = () => {
     <>
       {loader && <Loader size={20} />}
       <div className="login-page flex">
-        <HeadTags title={"ورود"} />
+        <HeadTags title={"Login"} />
         <div className="flex">
           <img src="/vercel.svg" alt="logo" id="logo" />
         </div>
