@@ -1,6 +1,6 @@
+import PolarChart from "../../components/Charts/Polar";
 import Header from "../../components/Layout/Header";
 import NavBar from "../../components/Layout/NavBar";
-import DataTable from "react-data-table-component";
 
 const Orders = () => {
   const columns = [
@@ -34,15 +34,8 @@ const Orders = () => {
         <div className="page-content">
           <Header title={"سفارش ها"} />
           <div className=" flex">
-            <div className="data-table mt-100">
-              {" "}
-              <DataTable
-                columns={columns}
-                data={data}
-                selectableRows
-                pagination
-                responsive
-              />
+            <div className=" mt-100">
+              <PolarChart />
             </div>
           </div>
         </div>
