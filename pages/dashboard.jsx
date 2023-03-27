@@ -8,12 +8,12 @@ const Dashboard = () => {
       <div className="grid-container">
         <NavBar />
         <div className="page-content">
-          <Header title="پیشخوان" />
+          <Header title="Dashboard" />
           <div className="website-details">
             <Link href={"/orders"}>
               <a>
                 <div className="login-form">
-                  <p>سفارش ها</p>
+                  <p> Orders</p>
                   <p>10</p>
                 </div>
               </a>
@@ -21,7 +21,7 @@ const Dashboard = () => {
             <Link href={"/users"}>
               <a>
                 <div className="login-form">
-                  <p>کاربر ها</p>
+                  <p> Users</p>
                   <p>9</p>
                 </div>
               </a>
@@ -29,7 +29,7 @@ const Dashboard = () => {
             <Link href={"/branches"}>
               <a>
                 <div className="login-form">
-                  <p>نمایندگی ها</p>
+                  <p>Branches</p>
                   <p>12</p>
                 </div>
               </a>

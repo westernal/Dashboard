@@ -18,7 +18,7 @@ body {
   font-family: yekan;
   overflow-x: hidden;
   margin: 0;
-  direction: rtl;
+  direction: ltr;
 }
 
 .flex {
@@ -292,7 +292,7 @@ a {
   width: 20px;
   position: absolute;
   top: 12px;
-  left: 15px;
+  right: 15px;
 }
 
 @media only screen and (max-width: 920px) {

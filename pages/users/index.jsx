@@ -5,16 +5,15 @@ import DataTable from "react-data-table-component";
 const Users = () => {
   const columns = [
     {
-      name: "نام",
+      name: "Name",
       selector: (row) => row.title,
       sortable: true,
     },
     {
-      name: "کد کاربر",
+      name: "ID",
       selector: (row) => row.year,
     },
   ];
-
   const data = [
     {
       id: 1,
@@ -32,7 +31,7 @@ const Users = () => {
       <div className="grid-container">
         <NavBar />
         <div className="page-content">
-          <Header title={"کاربر ها"} />
+          <Header title={" Users"} />
           <div className=" flex">
             <div className="data-table mt-100">
               {" "}

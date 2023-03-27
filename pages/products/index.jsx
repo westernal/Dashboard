@@ -6,12 +6,12 @@ import Link from "next/link";
 const Products = () => {
   const columns = [
     {
-      name: "نام",
+      name: "Name",
       selector: (row) => row.title,
       sortable: true,
     },
     {
-      name: "کد کاربر",
+      name: "ID",
       selector: (row) => row.year,
     },
   ];

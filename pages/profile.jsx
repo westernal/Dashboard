@@ -28,11 +28,11 @@ const Profile = () => {
     const secondPassword = document.getElementById("rpassword");
 
     if (password.value != secondPassword.value) {
-      toast.error("تکرار رمز عبور مطابقت ندارد.");
+      toast.error("Repeat password is not correct.");
     }
 
     if (password.value < 6) {
-      toast.error("کلمه عبور اشتباه است");
+      toast.error("Password should be more than 6 characters.");
     } else changePassword(password.value);
   }
 
@@ -41,7 +41,7 @@ const Profile = () => {
       <div className="grid-container">
         <NavBar />
         <div className="page-content">
-          <Header title={"مشخصات"} />
+          <Header title={"Profile"} />
           {loader && <Loader size={20} />}
           <div className="flex">
             <div className="login-form mt-100">
@@ -53,7 +53,7 @@ const Profile = () => {
                   readOnly
                 />
                 <div className="pw-input">
-                  <input type="password" placeholder="رمز عبور" id="password" />
+                  <input type="password" placeholder="Password" id="password" />
                   <a href="#" onClick={showPassword}>
                     <img
                       src="/Images/eye-svgrepo-com.svg"
@@ -64,7 +64,7 @@ const Profile = () => {
                 <div className="pw-input">
                   <input
                     type="password"
-                    placeholder="تکرار رمز عبور"
+                    placeholder="Repeat password"
                     id="rpassword"
                   />
                   <a href="#" onClick={showPassword}>
@@ -77,7 +77,7 @@ const Profile = () => {
               </div>
               <div className="flex">
                 <button id="prime-btn" onClick={checkInputs}>
-                  ویرایش
+                  Save
                 </button>
               </div>
             </div>

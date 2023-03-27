@@ -5,12 +5,12 @@ import DataTable from "react-data-table-component";
 const Branches = () => {
   const columns = [
     {
-      name: "نام",
+      name: "Name",
       selector: (row) => row.title,
       sortable: true,
     },
     {
-      name: "کد کاربر",
+      name: "ID",
       selector: (row) => row.year,
     },
   ];
@@ -32,10 +32,9 @@ const Branches = () => {
       <div className="grid-container">
         <NavBar />
         <div className="page-content">
-          <Header title={"نمایندگی ها"} />
+          <Header title={"Branches"} />
           <div className=" flex">
             <div className="data-table mt-100">
-              {" "}
               {data && (
                 <DataTable
                   columns={columns}

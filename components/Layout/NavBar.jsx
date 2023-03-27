@@ -14,7 +14,7 @@ const NavBar = () => {
     e.preventDefault();
 
     localStorage.removeItem("token");
-    toast.success("با موفقیت خارج شدید.");
+    toast.success("Logged out successfuly");
     router.push("/");
   }
 
@@ -35,7 +35,7 @@ const NavBar = () => {
             <div className="user-img flex">
               <img src="/Images/profile-svgrepo-com.svg" alt="user's picture" />
             </div>
-            <p id="username">علی نویدی</p>
+            <p id="username">Ali Navidi</p>
           </div>
         </a>
       </Link>
@@ -45,7 +45,7 @@ const NavBar = () => {
           <a>
             <div className="nav-item flex" id="dash-item">
               <img src="/Images/dashboard-svgrepo-com.svg" alt="Dashboard" />
-              <p>پیشخوان</p>
+              <p>Dashboard</p>
             </div>
           </a>
         </Link>
@@ -54,7 +54,7 @@ const NavBar = () => {
           <a>
             <div className="nav-item flex" id="profile-item">
               <img src="/Images/profile-svgrepo-com.svg" alt="Profile" />
-              <p>مشخصات</p>
+              <p>Profile</p>
             </div>
           </a>
         </Link>
@@ -63,7 +63,7 @@ const NavBar = () => {
           <a>
             <div className="nav-item flex" id="products-item">
               <img src="/Images/products-svgrepo-com.svg" alt="Products" />
-              <p>محصول ها</p>
+              <p> Products</p>
             </div>
           </a>
         </Link>
@@ -72,7 +72,7 @@ const NavBar = () => {
           <a>
             <div className="nav-item flex" id="users-item">
               <img src="/Images/users-svgrepo-com.svg" alt="Users" />
-              <p>کاربر ها</p>
+              <p> Users</p>
             </div>
           </a>
         </Link>
@@ -81,7 +81,7 @@ const NavBar = () => {
           <a>
             <div className="nav-item flex" id="orders-item">
               <img src="/Images/cart 1.svg" alt="Orders" />
-              <p>سفارش ها</p>
+              <p> Orders</p>
             </div>
           </a>
         </Link>
@@ -90,7 +90,7 @@ const NavBar = () => {
           <a>
             <div className="nav-item flex" id="branches-item">
               <img src="/Images/branches-svgrepo-com.svg" alt="Branches" />
-              <p>نمایندگی ها</p>
+              <p> Branches</p>
             </div>
           </a>
         </Link>
@@ -98,7 +98,7 @@ const NavBar = () => {
         <a href="#" onClick={logOut}>
           <div className="nav-item flex">
             <img src="/Images/icons8-logout-24.png" alt="logout" />
-            <p id="logout-color">خروج</p>
+            <p id="logout-color">Logout</p>
           </div>
         </a>
       </div>

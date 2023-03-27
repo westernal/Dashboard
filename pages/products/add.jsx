@@ -9,7 +9,7 @@ const AddProducts = () => {
 
   function addProduct(details, title, image) {
     SetLoader(true);
-    toast.success("محصول با موفقیت ثبت شد.");
+    toast.success("Product added successfuly");
   }
 
   function checkInputs(e) {
@@ -20,11 +20,11 @@ const AddProducts = () => {
     const image = document.getElementById("image");
 
     if (details.value == "") {
-      toast.error("نام محصول وارد نشد");
+      toast.error("Please enter product's details.");
     }
 
     if (title.value == "") {
-      toast.error("توضیح محصول وارد نشد");
+      toast.error("Please enter product's title.");
     } else addProduct(details.value, title.value, image.value);
   }
   return (
@@ -32,22 +32,22 @@ const AddProducts = () => {
       <div className="grid-container">
         <NavBar />
         <div className="page-content">
-          <Header title={"محصول ها"} />
+          <Header title={" Products"} />
           {loader && <Loader size={20} />}
           <div className="flex">
             <div className="login-form mt-100">
               <div className="inputs">
                 <div className="add-image">
-                  <label htmlFor="image">تصویر محصول:</label>
+                  <label htmlFor="image">Image:</label>
                   <input type="file" id="image" name="image" accept="image/*" />
                 </div>
-                <input type="text" placeholder="نام محصول" id="title" />
+                <input type="text" placeholder="Title" id="title" />
 
-                <input type="text" placeholder="توضیح محصول" id="details" />
+                <input type="text" placeholder="Details" id="details" />
               </div>
               <div className="flex">
                 <button id="prime-btn" onClick={checkInputs}>
-                  ثبت
+                  Submit
                 </button>
               </div>
             </div>

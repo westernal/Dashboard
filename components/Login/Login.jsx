@@ -36,7 +36,7 @@ const Login = () => {
 
     // if (result.status == 201) {
     //   localStorage.setItem("token", result.data.token);
-    toast.success("با موفقيت وارد شديد.");
+    toast.success("Loggedin successfuly");
     route.push("/dashboard");
     // } else {
     //   toast.error("مشکلی رخ داده، لطفا دوباره تلاش کنید.");
@@ -51,11 +51,11 @@ const Login = () => {
     const email = document.getElementById("email");
 
     if (email.value == "") {
-      toast.error("ایمیلی وارد نشد");
+      toast.error("Please enter email.");
     }
 
     if (password.value < 6) {
-      toast.error("کلمه عبور اشتباه است");
+      toast.error("Password should be more than 6 characters.");
     } else logIn(email.value, password.value);
   }
 
@@ -69,9 +69,9 @@ const Login = () => {
         </div>
         <div className="login-form">
           <div className="inputs">
-            <input type="text" placeholder="ایمیل" id="email" />
+            <input type="text" placeholder="Email" id="email" />
             <div className="pw-input">
-              <input type="password" placeholder="رمز عبور" id="password" />
+              <input type="password" placeholder="Password" id="password" />
               <a href="#" onClick={showPassword}>
                 <img src="/Images/eye-svgrepo-com.svg" alt="Show Password" />
               </a>
@@ -79,7 +79,7 @@ const Login = () => {
           </div>
           <div className="flex">
             <button id="prime-btn" onClick={checkInputs}>
-              ورود
+              Login
             </button>
           </div>
         </div>
